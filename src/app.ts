@@ -2,7 +2,7 @@ import Stubr from 'stubr';
 import { UsersController } from './controllers/users-controller';
 import { CorsMiddleware } from './middleware/cors-middleware';
 import { User } from './models/user';
-import { users } from "./assets/users.map";
+import { users } from './assets/users.map';
 
 /**
  * Class that manage the state and storage of the data.
@@ -40,7 +40,7 @@ class ApiMock {
      * of the API
      */
     launch(): void {
-        let usersController = new UsersController(this.stubr);
+        const usersController = new UsersController(this.stubr);
         usersController.registerControllerEndpoints();
         this.stubr.run();
     }
@@ -54,12 +54,10 @@ class ApiMock {
 }
 
 //Create app instance and launch to run Stubr
-let app = new ApiMock();
+const app = new ApiMock();
 app.initData();
 app.launch();
 
 //Create CORS middleware and start to listen
-let corsMiddleware = new CorsMiddleware();
+const corsMiddleware = new CorsMiddleware();
 corsMiddleware.createAndListen();
-
-

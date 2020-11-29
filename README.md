@@ -27,7 +27,7 @@ Demo project about how Stubr can be implemeted to mock an API
 This plugins are recommended to work on this project:
 
 -   **Bracket Pair Colorizer 2:** _Helps to identify the scopes of code. Gives different colors to parentheses, brackets, curly braces, etc. to identify the start and the end of functions, classes, evaluations, etc._
--   **TSLint:** _Implements TSLint code policies in VS Code._
+-   **ESLint:** _Implements ESLint code policies in VS Code._
 -   **GitLens:** _Help to manage git repo history. Allow to see file history, etc._
 -   **Path Intellisense:** _Helps to autocomplete references file paths in the code._
 -   **Prettier:** _Format the code making it readable._ **(Nearly mandatory)**
