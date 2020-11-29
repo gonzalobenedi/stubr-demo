@@ -7,8 +7,8 @@
         "test": "echo 'No test defined' && exit 1",
         "start": "node -r esm -r ts-node/register ./src/app.ts",
         "dev": "nodemon",
-        "pretty": "prettier --config .prettierrc.js --write '*/**/*.ts'",
-        "lint": "eslint '*/**/*.{js,ts}' --quiet --fix --no-error-on-unmatched-pattern"
+        "pretty": "prettier --config .prettierrc.js --write \"*/**/*.ts\"",
+        "lint": "eslint \"*/**/*.{js,ts}\" --quiet --fix --no-error-on-unmatched-pattern"
     },
     "keywords": [
         "stubr"
