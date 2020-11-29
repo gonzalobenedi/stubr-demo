@@ -1,5 +1,4 @@
-var cors_proxy = require('cors-anywhere');
-
+import cors_proxy = require('cors-anywhere');
 
 export class CorsMiddleware {
     host: string;
@@ -10,12 +9,16 @@ export class CorsMiddleware {
     }
 
     createAndListen(): void {
-        cors_proxy.createServer({
-            originWhitelist: [],
-            requireHeader: [],
-            removeHeaders: ['cookie', 'cookie2']
-        }).listen(this.port, this.host, () => {
-            console.log('Running CORS Anywhere on ' + this.host + ':' + this.port);
-        });
+        cors_proxy
+            .createServer({
+                originWhitelist: [],
+                requireHeader: [],
+                removeHeaders: ['cookie', 'cookie2'],
+            })
+            .listen(this.port, this.host, () => {
+                console.log(
+                    'Running CORS Anywhere on ' + this.host + ':' + this.port
+                );
+            });
     }
 }
